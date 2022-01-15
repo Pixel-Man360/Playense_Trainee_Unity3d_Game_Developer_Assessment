@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Crown : MonoBehaviour
 {
-    [SerializeField] private GameObject _crown;
+    [SerializeField] private MeshRenderer _crown;
 
     void Start()
     {
-        _crown.SetActive(false);
+        _crown.enabled = false;
     }
 
     void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.name == "Player")
         {
-            _crown.SetActive(true);
+            _crown.enabled = true;
         }
     }
 }

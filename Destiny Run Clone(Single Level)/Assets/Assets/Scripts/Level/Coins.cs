@@ -18,7 +18,7 @@ public class Coins : MonoBehaviour
         if(other.gameObject.name == "Player")
         {
             OnCoinCollected?.Invoke();
-            
+            this.gameObject.SetActive(false); 
         }
     }
 
